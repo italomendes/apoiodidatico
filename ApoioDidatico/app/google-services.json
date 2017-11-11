@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "439513934017",
+    "firebase_url": "https://apoiodidatico-dac46.firebaseio.com",
+    "project_id": "apoiodidatico-dac46",
+    "storage_bucket": "apoiodidatico-dac46.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439513934017:android:900cb64447b59831",
+        "android_client_info": {
+          "package_name": "br.com.italomendes.apoiodidatico"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "439513934017-pnjep1bd174ph936a17orpnbud7ea2kb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.italomendes.apoiodidatico",
+            "certificate_hash": "81f6d449b99c2d63b1244f8c378a4798d6a64410"
+          }
+        },
+        {
+          "client_id": "439513934017-v5rickvrrh8205179kga141k8o5ruvjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxrGo3bb3qaNHOe1-rWbB4IgezETUE2wA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "439513934017-v5rickvrrh8205179kga141k8o5ruvjp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
