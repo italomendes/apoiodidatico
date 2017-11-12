@@ -2,4 +2,11 @@
     <string name="app_name">Apoio Didático</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_agendamento">Agendar</string>
+    <string-array name="equipamentos">
+        <item>Projetor</item>
+        <item>Laboratório de informática</item>
+        <item>Cabo HDMI</item>
+        <item>Controle projetor</item>
+        <item>Controle Ar-Condicionado</item>
+    </string-array>
 </resources>
