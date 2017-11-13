@@ -37,7 +37,7 @@
         android:layout_weight="0.04" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView2"
@@ -45,6 +45,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignStart="@+id/textView2"
         android:layout_below="@+id/textView2"
+        android:focusable="false"
         android:ems="10"
         android:inputType="textPersonName"
         android:visibility="visible" />
@@ -58,11 +59,12 @@
     />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editRetirada"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:focusable="false"
         />
 
     <TextView
@@ -74,10 +76,10 @@
         android:layout_marginTop="10dp"/>
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/editDevolucao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:focusable="false"
         android:inputType="textPersonName" />
 
     <Button
