@@ -1,22 +1,18 @@
-package br.com.italomendes.apoiodidatico;
+package br.com.italomendes.apoiodidatico.Views;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.Spinner;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
+import br.com.italomendes.apoiodidatico.Fragments.AgendamentoFragment;
+import br.com.italomendes.apoiodidatico.Fragments.HistoricoFragment;
+import br.com.italomendes.apoiodidatico.R;
+import br.com.italomendes.apoiodidatico.Adapters.SectionsPageAdapter;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -27,9 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        this.setTitle("Apoio Didático");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(myToolbar);
         Log.d(TAG, "onCreate: Starting.");
 
         mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());

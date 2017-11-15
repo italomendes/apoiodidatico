@@ -1,4 +1,4 @@
-package br.com.italomendes.apoiodidatico;
+package br.com.italomendes.apoiodidatico.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+
+import br.com.italomendes.apoiodidatico.R;
 
 /**
  * Created by root on 12/11/2017.

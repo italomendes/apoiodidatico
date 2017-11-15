@@ -91,6 +91,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_vertical|center_horizontal"
         android:layout_marginBottom="185dp"
-        android:text="Agendar" />
+        android:text="Agendar"
+        android:elevation="4dp" />
 
 </LinearLayout>

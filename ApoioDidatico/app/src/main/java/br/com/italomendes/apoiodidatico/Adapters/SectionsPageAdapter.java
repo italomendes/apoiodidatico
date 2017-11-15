@@ -1,4 +1,4 @@
-package br.com.italomendes.apoiodidatico;
+package br.com.italomendes.apoiodidatico.Adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

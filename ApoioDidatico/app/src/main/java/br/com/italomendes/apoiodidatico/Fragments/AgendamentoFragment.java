@@ -1,7 +1,8 @@
-package br.com.italomendes.apoiodidatico;
+package br.com.italomendes.apoiodidatico.Fragments;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -21,6 +22,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+import br.com.italomendes.apoiodidatico.R;
+import br.com.italomendes.apoiodidatico.Views.AgendamentoActivity;
+
 /**
  * Created by root on 12/11/2017.
  */
@@ -28,10 +32,11 @@ import java.util.Locale;
 public class AgendamentoFragment extends Fragment {
     private static final String TAG = "Agendamento";
 
-    private Button btnTEST;
+    private Button btnAgendar;
     private EditText editData;
     private EditText editRetirada;
     private EditText editDevolucao;
+    private Spinner mySpinner;
 
     @Nullable
     @Override
@@ -39,7 +44,6 @@ public class AgendamentoFragment extends Fragment {
 
 
         final View view = inflater.inflate(R.layout.agendamento_fragment,container,false);
-        final Spinner mySpinner = (Spinner) view.findViewById(R.id.spinner);
 
         findById(view);
         startSpinner(view, mySpinner);
@@ -47,7 +51,20 @@ public class AgendamentoFragment extends Fragment {
         editRetirada.setOnClickListener(getTime(editRetirada));
         editDevolucao.setOnClickListener(getTime(editDevolucao));
 
+        btnAgendar.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                showCadastroAgendamento();
+            }
+        });
+
         return view;
+    }
+
+    private void showCadastroAgendamento() {
+        Intent intent = new Intent(getActivity(), AgendamentoActivity.class);
+        startActivity(intent);
     }
 
     private void startSpinner(View view, Spinner mySpinner) {
@@ -89,7 +106,6 @@ public class AgendamentoFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 Calendar mcurrentTime = Calendar.getInstance();
                 int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
                 int minute = mcurrentTime.get(Calendar.MINUTE);
@@ -98,7 +114,7 @@ public class AgendamentoFragment extends Fragment {
                 mTimePicker = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                        time.setText( selectedHour + ":" + selectedMinute);
+                        time.setText( (selectedHour < 10 ? "0" + selectedHour : selectedHour) + ":" + (selectedMinute < 10 ? "0" + selectedMinute : selectedMinute));
                     }
                 }, hour, minute, true);
                 mTimePicker.setTitle("Selecione a hora");
@@ -109,10 +125,11 @@ public class AgendamentoFragment extends Fragment {
     }
 
     private void findById(View view) {
-        btnTEST = (Button) view.findViewById(R.id.btnAgendar);
+        btnAgendar = (Button) view.findViewById(R.id.btnAgendar);
         editData = (EditText) view.findViewById(R.id.editData);
         editRetirada = (EditText) view.findViewById(R.id.editRetirada);
         editDevolucao = (EditText) view.findViewById(R.id.editDevolucao);
+        mySpinner = (Spinner) view.findViewById(R.id.spinner);
     }
 
     private SimpleDateFormat getDateFormat() {
